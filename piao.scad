@@ -1,5 +1,7 @@
 size = 24;
 diametro_prego = 3;
+rotate([90,90+45,0])
+union () {
 difference(){
   for (n = [1:size]){
     translate([n,n,0])
@@ -14,4 +16,5 @@ translate([size*2,size*2,0])
     difference(){
        cylinder(r=size*0.2,h=size);
        cylinder(r=size*0.1,h=size);
-    }
+    };
+}
